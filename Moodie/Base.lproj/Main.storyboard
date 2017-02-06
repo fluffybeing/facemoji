@@ -690,26 +690,15 @@
                                 <rect key="frame" x="0.0" y="0.0" width="480" height="270"/>
                                 <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" id="C9D-ts-3GK"/>
                             </imageView>
-                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dSZ-bE-sGd">
-                                <rect key="frame" x="8" y="234" width="48" height="26"/>
-                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Label" id="3MT-ME-I1a">
-                                    <font key="font" size="18" name="Georgia"/>
-                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
-                                    <color key="backgroundColor" red="1" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
-                                </textFieldCell>
-                            </textField>
                         </subviews>
                         <constraints>
                             <constraint firstAttribute="bottom" secondItem="fQg-Nq-tAp" secondAttribute="bottom" id="6NJ-PA-dwV"/>
                             <constraint firstAttribute="trailing" secondItem="fQg-Nq-tAp" secondAttribute="trailing" id="6mK-q3-cig"/>
-                            <constraint firstItem="dSZ-bE-sGd" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="10" id="IOH-bL-Kn2"/>
                             <constraint firstItem="fQg-Nq-tAp" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" id="oxu-gE-hTQ"/>
-                            <constraint firstItem="dSZ-bE-sGd" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="10" id="pt5-gn-Y5c"/>
                             <constraint firstItem="fQg-Nq-tAp" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" id="z9r-Xp-BPv"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="imageLabel" destination="dSZ-bE-sGd" id="iY7-Q1-Pam"/>
                         <outlet property="imageView" destination="fQg-Nq-tAp" id="r3K-BK-XvG"/>
                     </connections>
                 </viewController>

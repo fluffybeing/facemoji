@@ -11,7 +11,6 @@ import Cocoa
 
 class ViewController: NSViewController, AFDXDetectorDelegate {
     
-    @IBOutlet weak var imageLabel: NSTextField!
     @IBOutlet weak var imageView: NSImageView!
     
     var detector: AFDXDetector!
@@ -84,6 +83,7 @@ class ViewController: NSViewController, AFDXDetectorDelegate {
         let points = points.map{$0 as! CGPoint}
         
         // This will give the bounds as the Affdex API don't have face bounds
+        // calculated using the face points
         let minX = points.sorted(by: {$0.x < $1.x})[0].x
         let maxX = points.sorted(by: {$0.x > $1.x})[0].x
         let minY = points.sorted(by: {$0.y < $1.y})[0].y
@@ -92,6 +92,8 @@ class ViewController: NSViewController, AFDXDetectorDelegate {
         self.imageBound = CGRect(x: minX, y: minY, width: (maxX-minX), height: (maxY-minY))
     }
     
+    // Below three methods hangle emoji image dispaly
+    // on the page
     func addEmojiView() {
         self.emojiView = NSImageView(frame: self.imageBound ?? CGRect())
         self.imageView.addSubview(emojiView)
@@ -118,6 +120,8 @@ class ViewController: NSViewController, AFDXDetectorDelegate {
                 
                 let emoji = (face as AnyObject).emojis!.dominantEmoji
                 
+                // couldn't able to find better way to map the emoji value to image
+                // takes the raw value of emoji and map it to the image
                 switch emoji.rawValue {
                 case 128515:
                     self.addEmojiImage(emotion: "smiley")
@@ -143,11 +147,8 @@ class ViewController: NSViewController, AFDXDetectorDelegate {
             if facePoints != nil {
                 // calculate face bound
                 self.rectangleBound(points: facePoints!)
-                
-                let rectImage = AFDXDetector.image(byDrawingPoints: nil, andRectangles: nil, andImages: nil, withRadius: 2.0, usingPointColor: NSColor.white, usingRectangleColor: NSColor.green, usingImageRects: nil, on: image)
-            
-                self.imageView.image = rectImage
             }
+            self.imageView.image = image
         }
     }
 }
