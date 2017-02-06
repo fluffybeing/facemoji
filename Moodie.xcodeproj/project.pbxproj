@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2B68F8A1269F44696F579576 /* Pods_Moodie.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4789CDB63F9BD4CA9DE20661 /* Pods_Moodie.framework */; };
 		B7A66C961E48490F00FBA7BF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7A66C951E48490F00FBA7BF /* AppDelegate.swift */; };
 		B7A66C981E48490F00FBA7BF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7A66C971E48490F00FBA7BF /* ViewController.swift */; };
 		B7A66C9A1E48490F00FBA7BF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B7A66C991E48490F00FBA7BF /* Assets.xcassets */; };
@@ -14,13 +15,16 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		385DF8746F4804BB6B62D87C /* Pods-Moodie.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Moodie.release.xcconfig"; path = "Pods/Target Support Files/Pods-Moodie/Pods-Moodie.release.xcconfig"; sourceTree = "<group>"; };
+		4789CDB63F9BD4CA9DE20661 /* Pods_Moodie.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Moodie.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B7A66C921E48490F00FBA7BF /* Moodie.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Moodie.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B7A66C951E48490F00FBA7BF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B7A66C971E48490F00FBA7BF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		B7A66C991E48490F00FBA7BF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B7A66C9C1E48491000FBA7BF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B7A66C9E1E48491000FBA7BF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		B7A66CA41E48494600FBA7BF /* Moodie-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Moodie-Bridging-Header.h"; sourceTree = "<group>"; };
+		B7A66CA51E484B9700FBA7BF /* Moodie-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Moodie-Bridging-Header.h"; sourceTree = "<group>"; };
+		F0FE1F8AADB72916BB85988F /* Pods-Moodie.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Moodie.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Moodie/Pods-Moodie.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -28,17 +32,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2B68F8A1269F44696F579576 /* Pods_Moodie.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9699C05FDB5817231FBFADFB /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F0FE1F8AADB72916BB85988F /* Pods-Moodie.debug.xcconfig */,
+				385DF8746F4804BB6B62D87C /* Pods-Moodie.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		B5A85039B429CE9675998F47 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4789CDB63F9BD4CA9DE20661 /* Pods_Moodie.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		B7A66C891E48490F00FBA7BF = {
 			isa = PBXGroup;
 			children = (
 				B7A66C941E48490F00FBA7BF /* Moodie */,
 				B7A66C931E48490F00FBA7BF /* Products */,
+				9699C05FDB5817231FBFADFB /* Pods */,
+				B5A85039B429CE9675998F47 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -53,7 +77,7 @@
 		B7A66C941E48490F00FBA7BF /* Moodie */ = {
 			isa = PBXGroup;
 			children = (
-				B7A66CA41E48494600FBA7BF /* Moodie-Bridging-Header.h */,
+				B7A66CA51E484B9700FBA7BF /* Moodie-Bridging-Header.h */,
 				B7A66C951E48490F00FBA7BF /* AppDelegate.swift */,
 				B7A66C971E48490F00FBA7BF /* ViewController.swift */,
 				B7A66C991E48490F00FBA7BF /* Assets.xcassets */,
@@ -70,9 +94,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B7A66CA11E48491000FBA7BF /* Build configuration list for PBXNativeTarget "Moodie" */;
 			buildPhases = (
+				51FADFB66B549F80D7539DE9 /* [CP] Check Pods Manifest.lock */,
 				B7A66C8E1E48490F00FBA7BF /* Sources */,
 				B7A66C8F1E48490F00FBA7BF /* Frameworks */,
 				B7A66C901E48490F00FBA7BF /* Resources */,
+				6D7F75FEFE40F55BCB506590 /* [CP] Embed Pods Frameworks */,
+				B063F024BE4F0885FA140B8E /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -128,6 +155,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		51FADFB66B549F80D7539DE9 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		6D7F75FEFE40F55BCB506590 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Moodie/Pods-Moodie-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B063F024BE4F0885FA140B8E /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Moodie/Pods-Moodie-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		B7A66C8E1E48490F00FBA7BF /* Sources */ = {
@@ -245,6 +320,7 @@
 		};
 		B7A66CA21E48491000FBA7BF /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F0FE1F8AADB72916BB85988F /* Pods-Moodie.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -259,6 +335,7 @@
 		};
 		B7A66CA31E48491000FBA7BF /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 385DF8746F4804BB6B62D87C /* Pods-Moodie.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -290,6 +367,7 @@
 				B7A66CA31E48491000FBA7BF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
