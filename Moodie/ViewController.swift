@@ -82,12 +82,15 @@ class ViewController: NSViewController, AFDXDetectorDelegate {
         // let point = (points[0] as! NSValue) as CGPoint
         let points = points.map{$0 as! CGPoint}
         
+        // make emoji bigger
+        let offset = CGFloat(10.0)
+        
         // This will give the bounds as the Affdex API don't have face bounds
         // calculated using the face points
-        let minX = points.sorted(by: {$0.x < $1.x})[0].x
-        let maxX = points.sorted(by: {$0.x > $1.x})[0].x
-        let minY = points.sorted(by: {$0.y < $1.y})[0].y
-        let maxY = points.sorted(by: {$0.y > $1.y})[0].y
+        let minX = points.sorted(by: {$0.x < $1.x})[0].x + offset
+        let maxX = points.sorted(by: {$0.x > $1.x})[0].x + offset
+        let minY = points.sorted(by: {$0.y < $1.y})[0].y + offset
+        let maxY = points.sorted(by: {$0.y > $1.y})[0].y + offset
         
         self.imageBound = CGRect(x: minX, y: minY, width: (maxX-minX), height: (maxY-minY))
     }
