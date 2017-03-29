@@ -1,9 +1,9 @@
 Facemoji
 ======
 
-Facemoji is an OSX app which displays emoji's according to the user face emotion. It is an OSX version of [MIT Media Lab Mood Meter](http://moodmeter.media.mit.edu/){:target="_blank"}.
+Facemoji is an OSX app which displays emoji's according to the user face emotion. It is an OSX version of [MIT Media Lab Mood Meter](http://moodmeter.media.mit.edu/).
 
-![SnapShot of Running App](/resource/img.png "Facemoji Screeshot")
+![Snapshot of Running App](/resource/img.png?raw=true "Facemoji Screeshot")
 
 
 ### How to run the project
