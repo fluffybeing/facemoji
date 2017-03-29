@@ -20,11 +20,11 @@ class ViewController: NSViewController, AFDXDetectorDelegate {
     var facePoints: NSArray?
     var imageBound: CGRect?
     
-    override func viewWillAppear() {
-        super.viewWillAppear()
+    override func viewDidAppear() {
+        super.viewDidAppear()
         
         // launch the detector
-        createDetector()
+        startDetector()
         
         // add subviews
         self.addEmojiView()
@@ -37,7 +37,7 @@ class ViewController: NSViewController, AFDXDetectorDelegate {
     }
     
     
-    func createDetector() {
+    func startDetector() {
         detector = AFDXDetector.init(delegate: self, using: AFDX_CAMERA_FRONT, maximumFaces: 5)
         // detector specific settings
         // http://developer.affectiva.com/v3_1_1/osx/analyze-camera/
@@ -114,6 +114,7 @@ class ViewController: NSViewController, AFDXDetectorDelegate {
     
     func detector(_ detector: AFDXDetector!, hasResults faces: NSMutableDictionary!, for image: NSImage!, atTime time: TimeInterval) {
         
+    
         if faces != nil {
             // enumrate the dictionary of faces and process each one
             for (_, face ) in faces! {
@@ -122,7 +123,6 @@ class ViewController: NSViewController, AFDXDetectorDelegate {
                 self.facePoints = (face as AnyObject).facePoints
                 
                 let emoji = (face as AnyObject).emojis!.dominantEmoji
-                
                 // couldn't able to find better way to map the emoji value to image
                 // takes the raw value of emoji and map it to the image
                 switch emoji.rawValue {
